@@ -1,21 +1,46 @@
-import {useState} from "react";
+import {useState} from 'react'
 
 
 function Contact() {
-    const [form, setForm] = useState({name:"",message:""});
+    const [form, setForm] = useState({name:"",email:"",message:""});
+    const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit=(e)=>{
+    const handleSubmit = (e)=>{
         e.preventDefault();
-        alert(`Thanks ${form.name} we have receive your messages!`);
-        setForm({name: "", message:""});
+        setSubmitted(true);
+        setForm({name:"",email:"",message:""});
+        setTimeout(()=>setSubmitted(false), 3000);
     };
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Contact me</h2>
-            <input placeholder="your Name" value={form.name} onChange={(e)=>setForm({...form, name: e.target.value})} required />
-            <textarea placeholder="your Message" value={form.message} onChange={(e)=>setForm({...form,message: e.target.value})} require></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <div className="contact-container">
+            <form className="contact-form" onSubmit={handleSubmit}>
+                <h1>Contact Maxwell Kirwa</h1>
+                <label htmlFor="name">Your Name</label>
+                <input id="name" placeholder="Your Name"
+                    value={form.name}
+                    onChange={(e)=>setForm({...form, name: e.target.value})}
+                    required
+                />
+                <label htmlFor="email">Your Email:</label>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Your Email"
+                    value={form.email}
+                    onChange={(e)=>setForm({...form, email: e.target.value})}
+                    required
+                />
+                <label htmlFor="message">Your Message</label>
+                <textarea id="message"
+                    placeholder="Your Message"
+                    value={form.message}
+                    onChange={(e)=>setForm({...form, message: e.target.value})}
+                    required
+                ></textarea>
+                <button type="submit">Send</button>
+                {submitted && <div className="contact-success">Thank you, I'll get back to you soon!</div>}
+            </form>
+        </div>
     );
 }
 export default Contact;
