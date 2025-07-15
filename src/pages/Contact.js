@@ -5,8 +5,15 @@ function Contact() {
     const [form, setForm] = useState({name:"",email:"",message:""});
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault();
+
+        const subject = `Contact Form Message from ${form.name}`;
+        const body = `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`;
+        const mailtoLink = `mailto:maxwellkirwa57@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+
         setSubmitted(true);
         setForm({name:"",email:"",message:""});
         setTimeout(()=>setSubmitted(false), 3000);
