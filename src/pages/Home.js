@@ -13,13 +13,14 @@ function Home(){
 
                 I'm Maxwell Kirwa Kipchirchir, a passionate full-stack developer with a focus on Android development, web technologies, and UI/UX design. With hands-on experience in both frontend and backend technologies, I build efficient, scalable, and user-friendly applications.
 
-                I’m a proud graduate of eMobilis Mobiel Technology Training , where I gained strong technical skills in JavaScript, Kotlin, Java, React, Firebase, and more. I've worked on several mobile and web-based projects, including a multi-service booking app that handles hotel, conference room, car rental, and taxi bookings.
+                I’m a proud graduate of eMobilis M
+                biel Technology Training , where I gained strong technical skills in JavaScript, Kotlin, Java, React, Firebase, and more. I've worked on several mobile and web-based projects, including a multi-service booking app that handles hotel, conference room, car rental, and taxi bookings.
 
                 I’m fluent in English and Kiswahili,an effective public speaker, and a strong team player. I thrive on continuous learning, building practical solutions, and contributing to real-world projects that make a difference.
             </p>
             <div className="home-buttons">
-                <a href="/Maxwell_Kirwa_CV.pdf" download className="btn">
-                    <FaDownload/>Download CV
+                <a href="/KIRWA%20MAXWELL%20KIPCHIRCHIR%20-RESUME.pdf" download className="btn">
+                    <FaDownload/>Download Resume
                 </a>
                 <a href="https://www.linkedin.com/in/maxwell-kirwa-67b656353" target="_blank" rel="noreferrer" className="btn outline">
                     <FaLinkedin/> LinkedIn
