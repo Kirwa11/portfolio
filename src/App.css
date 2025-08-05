@@ -189,41 +189,78 @@ body {
 }
 
 /*projects*/
-.projects{
+.projects {
   padding: 2rem 0;
   background: #f7f7fa;
   display: flex;
-  flex-direction:  column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
-.projects h2{
-  font-size: 65px;
+
+.projects h2 {
+  font-size: 3rem;
   font-weight: 500;
-
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.card1{
-  justify-content: center;
-  align-items: center;
+
+.card1 {
+  width: 100%;
   display: flex;
-  /*flex-direction: column;*/
-
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
 }
+
 .project-card {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 1.5rem;
-  margin: 3rem;
-  width: calc(33% - 2rem);
+  margin: 1rem;
+  width: calc(33.333% - 2rem);
   transition: transform 0.2s, box-shadow 0.2s;
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  text-align: center;
 }
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .project-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+/* Desktop responsiveness */
+@media screen and (min-width: 1025px) {
+  .project-card {
+    width: calc(33.333% - 2rem);
+  }
+}
+
 /*contact*/
 .contact-container {
   display: flex;
